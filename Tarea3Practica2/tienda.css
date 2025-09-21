@@ -1,0 +1,9 @@
+body {
+      background-color: #1e1e1e;
+      color: #ffffff;
+      font-family: 'Lato', sans-serif;
+    }
+h1, h2, .card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+}
