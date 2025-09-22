@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  	<style>
+/*Para todo <span> que esté dentro de un <p> (descendiente)*/
+p span {
+	   background-color: aqua;
+}
+/*Para todo <span> que sea hijo directo de un <div>*/
+div > span {
+	background-color: bisque;
+}
+/*Para todo <b> que vaya inmediatamente después de un <span> (hermano adyacente)*/
+span + b {
+      	   margin: 6px;
+  	   background-color: burlywood;
+ 	}
+/*Para todo <div> que sea hermano posterior de un <p> dentro del mismo nivel*/	
+p ~ div {
+      	   border: 1px solid cadetblue;
+ 	}
+ 	</style>
+    </head>
+    <body>  
+	<div>
+    	   <p>Primer párrafo.</p> <p><span>Primera palabra</span> del segundo párrafo.</p>
+    	   <div>
+               <p>
+            	<span>Primera palabra</span>
+            	<b>remarcada</b> <strong>e importante</strong> 
+				dentro de un párrafo más interior</p>
+        	    <span>Sólo es una frase <b>suelta</b>.</span>
+    	   </div>
+
+		   <!--Modificaciones hechas por mi-->
+			<p>
+				<span>Este span sera azul ya que es hijo de un p</span>
+			</p>
+
+			<div>
+				<span>Este span sera amarillo ya que es hijo DIRECTO de un div</span>
+				<aside>
+					<span>En cambio este no, ya que es hijo de otra etiqueta</span>
+				</aside>
+			</div>
+
+			<span>Aqui hay una palabra </span> <b>Resaltada</b> <strong> Ya que esta justo al lado de un span</strong> <b>En cambio este no</b>
+
+			<p>
+				Aqui hay un parrafo
+			</p>
+			<div>
+				Este div es hermano de el parrafo, asi que se le aplicara un borde azul
+			</div>
+
+	</div>		 
+    </body>
+</html
