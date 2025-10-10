@@ -5,9 +5,9 @@
   <title>@layer en CSS</title>
   <style>
     /* Definimos capas 
-    @layer reset, base, theme;
-    @layer base,reset,theme;*/
-    @layer theme,base,reset;
+    @layer reset, base, theme;*/
+    @layer base,reset,theme;
+    /*@layer theme,base,reset;*/
 
     /* Ordenamos las capas */
     @layer reset {
@@ -20,16 +20,17 @@
 
     @layer base {
       button {
-        padding: 10px 20px;
+        padding: 15px 30px;
         border: 1px solid gray;
-        background: lightgray;
+        background: gainsboro;
         color: black;
       }
     }
 
     @layer theme {
       button {
-        background: indigo;
+        background: blue;
+        padding: 10px;
         color: white;
         border-radius: 8px;
       }

@@ -6,17 +6,19 @@
   <style>
     /* Estilo general */
     h2 {
-      color: blue;
+      color: purple;
     }
 
     /* Scoped: solo aplica dentro de .articulo */
     @scope (.articulo) {
       h2 {
-        color: crimson;
+        color: red;
       }
       p {
         font-style: italic;
       }
+
+      /*No funciona debido la version del navegadir*/
     }
   </style>
 </head>
