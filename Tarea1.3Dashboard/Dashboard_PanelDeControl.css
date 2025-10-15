@@ -1,0 +1,101 @@
+/*
+Entrega enlace de Git más captura del resultado en navegador en un archivo PDF
+
+Elabora la interfaz de un panel de control que cumpla los siguientes requisitos: 
+
+Un sidebar de tamaño fijo con un par de botones
+Un header horizontal que ocupe todo el ancho
+Un contenedor principal "main" con tarjetas "<div>" distribuidas en grid. Cada tarjeta tendrá una imagen (pueden ser imágenes repetidas)
+Un footer que ocupe todo el ancho
+Usad tamaños personalizados respetando tamaños fijos. Se pude incluir tamaño flexible donde no se especifique tipo de tamaño
+usad grid-template-columns y grid-template-rows
+Usad grid-row y grid-column para que el sidebar ocupe 2 filas
+Las tarjetas "<div>" estarán separadas entre sí (grid-gap)
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 420px 1fr 1fr;
+    grid-template-rows: 100px 1fr 20px 80px;
+    grid-gap: 15px;
+}
+
+header {
+    grid-column: 1 / 4;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+main{
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 15px;
+    
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.tarjeta {
+    min-width: 200px;
+    min-height: 200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+aside {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    text-align: center;
+    width: 100%;
+    background-color: gray;
+}
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+button{
+    padding: 10px;
+    margin: 5px;
+    width: 100px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover, .tarjeta:hover {
+    background-color: #45a049;
+    transform: scale(1.03);
+    transition: 400ms;
+}
+
+main, aside {
+  min-height: 500px;
+}
+
+footer {
+    grid-column: 1 / 4;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
