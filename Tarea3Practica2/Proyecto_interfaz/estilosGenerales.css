@@ -17,6 +17,12 @@ header{
     height: 120px; 
 }
 
+.logotipo{
+    height: 50px;
+    width: 50px;
+    padding: 0 10px;
+}
+
 nav{
     height: 100%;
     display: flex;
