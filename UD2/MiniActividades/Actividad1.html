@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        const nombre = "Kevin"
+        var edad = 19
+        var gustoProgramacion = true
+        var comidaFav = "Sushi"
+        let ciudad = "Cali"
+        let altura = 1.80
+
+        console.log("Nombre: " + nombre);
+        console.log("Edad: " + edad);
+        console.log("Me gusta programar? " + gustoProgramacion);
+        console.log("Comida Favorita: " + comidaFav);
+        console.log("Ciudad: " + ciudad);
+        console.log("Altura: " + altura + " metros");
+
+        /*
+
+        Modificaciones:
+
+
+        let ciudad = "Medellin" 
+
+        Uncaught SyntaxError: redeclaration of let ciudad
+            <anonymous> debugger eval code:1
+
+        Esto no pasa con "var"
+
+        ----------------------------------------------------
+
+        nombre = "Edu"
+
+        Uncaught TypeError: invalid assignment to const 'nombre'
+            <anonymous> debugger eval code:1
+
+        */
+
+                
+        const persona = {
+            nombre: "Pedro",
+            edad: 53
+        };
+
+        console.log(persona);
+
+        //Asi accedemos a los atributos de los objetos
+
+        persona.edad = 54
+
+        console.log(persona);
+
+        //Aunque un objeto sea const, me permite modificar sus valores
+
+        /*
+        persona = {
+
+        }
+        
+
+        const persona = {
+            
+        };
+
+        Uncaught SyntaxError: redeclaration of const personaActividad1.html:56:15note: Previously declared at line 41, column 15
+
+        esto pasa si intentamos redefinir el objeto persona
+
+        persona = {
+                nombre: "Pedro",
+                edad: 53,
+                gustoProgramacion: true
+        }
+
+        Uncaught TypeError: invalid assignment to const 'persona'
+            <anonymous> http://127.0.0.1:5500/UD2/MiniActividades/Actividad1.html:57
+
+        esto pasa si intentamos reasignar el objeto persona
+
+        persona = {
+                nombre: "Pedro",
+                edad: 53,
+                gustoProgramacion: true
+        }
+        */
+
+        var lista = ["melocoton", "manzana"]
+
+        console.log(lista);
+        
+        lista.push("pera")
+
+        console.log(lista);
+        
+        
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Mini actividad 1</h2>
+    <p>
+        Abre la consola del navegador para ver el resultado.
+    </p>
+</body>
+</html>
