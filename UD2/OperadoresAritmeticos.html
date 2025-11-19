@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        //Suma
+        let operacion = 2 + 2;
+        console.log("Suma de 2 + 2 = " + operacion);
+
+        //Resta
+        operacion = 4 - 2;
+        console.log("Resta de 2 - 2 = " + operacion);
+
+        //Multiplicacion
+        operacion = 4 * 4;
+        console.log("Multiplicacion de 2 * 2 = " + operacion);
+
+        //Division
+        operacion = 5 / 3;
+        console.log("Divicion de 2 / 2 = " + operacion);
+
+        //Modulo/Resto
+        operacion = 5 % 3;
+        console.log("Modulo/Resto de 2 % 2 = " + operacion);
+
+        //Incremento
+        let numero = 1;
+        console.log("Valor incrementado antes de devolverlo: " + ++numero);
+        console.log( numero);  
+        
+        console.log("Valor incrementado despues de devolverlo: " + numero++);
+        console.log( numero);
+
+        //Decremento
+        numero = 1;
+        console.log("Valor disminuido antes de devolverlo: " + --numero);
+        console.log( numero);  
+        
+        console.log("Valor disminuido despues de devolverlo: " + numero--);
+        console.log( numero);
+
+        /*Operadores de comparacion*/
+
+        let comparacion = (5 == 5);
+        console.log("Esto devolvera true ya que con el triple igual se compara el valor y el tipo de dato -> " + comparacion);
+
+        comparacion = (5 == '5');
+        console.log("Esto devolvera true, ya que el doble igual solo compara el valor -> " + comparacion);
+
+        comparacion = (5 === '5');
+        console.log("Esto devolvera false por lo mismo -> " + comparacion);
+
+        console.log(2 === 2);
+        console.log(2 == [2]);
+        console.log(2 == 2);
+        console.log(true == "true");
+        console.log(true == 1); //da true
+        console.log(true === "true"); //da false pq comprueba tambien el tipo de dato
+
+        console.log(true === "true");
+
+        comparacion = (5 != 3);
+        console.log("Esto devolvera true, ya que 5 es diferente de 3 -> " + comparacion);
+
+        comparacion = (5 !== 3);
+        console.log("Esto devolvera true, ya que 5 es diferente de '5' en tipo de dato -> " + comparacion);
+
+        const ejemplo = 10
+
+        //ejemplo += 5 Da error porque no se puede reasignar un valor a una constante
+        
+        
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Operadores Aritmeticos</h2>
+    <p>
+        Abre la consola del navegador para ver el resultado.
+    </p>
+</body>
+</html>
