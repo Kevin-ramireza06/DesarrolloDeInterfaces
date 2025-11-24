@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Ejercicio 1
+
+        var nombre = "Kevin"
+        var edad = 19
+        var altura = 1.80
+        var esAlumno = true
+
+        console.log(nombre);
+        console.log(edad);
+        console.log(altura);
+        console.log(esAlumno);
+
+        //Ejercicio 2
+
+        const PI = 3.1416
+        /*console.log("Aqui intento cambiar el valor");
+        PI = 4*/
+
+        /*
+        Uncaught TypeError: invalid assignment to const 'PI'
+            <anonymous> debugger eval code:1
+        */
+
+        //EJERCICIO 3
+
+        var alumno = {
+            nombre : "Kevin",
+            edad : 19,
+            curso : "DAM2"
+        }
+
+        console.log(alumno);
+        console.log(alumno.nombre);
+
+        //EJERCICIO 4
+
+        var notas = [7,8,9]
+
+        console.log(notas);
+        
+        console.log(notas[0]);
+        console.log(notas[2]);
+
+        notas.push(10);
+
+        console.log(notas);
+        
+        
+        //EJERCICIO 5
+
+        if (true) {
+            var variable = "varaible"
+            let local = "local"
+            const constante = "constante"
+
+            console.log("Dentro del if");
+
+            console.log(variable);
+            console.log(constante);
+            console.log(local);
+        }
+
+        console.log("Fuera del if");
+
+        console.log(variable);
+        /*console.log(constante);
+        console.log(local);*/
+
+        /*
+        las variables const, y let, son locales, y soo son vistas dentro
+        del bloque donde se crearon
+
+        Uncaught ReferenceError: constante is not defined
+
+        Uncaught ReferenceError: local is not defined
+        */
+
+        /*
+        EJERCICIO 6.
+        Escribe este código:
+        "use strict";
+        x = 10;
+        console.log(x);
+
+        Observa el resultado y coméntalo. Después, repite el ejercicio pero declarando la variable
+        */
+
+        "use strict";
+        //x = 10
+        x = 10;
+        console.log(x);
+
+        /*
+            Si se usa el "use strict, no se pueden declarar variables 
+            sin var, let o const, devuelve error
+
+            Uncaught ReferenceError: assignment to undeclared variable x
+                <anonymous> file:///home/alumno/Escritorio/Cosas De Kevin/Desarrollo De Interfaces/DesarrolloDeInterfaces/UD2/Practicas/practica2.1_KevinRamirez.html:12
+            
+            para que funcione el "use strict" TIENE QUE SER LA PRIMER 
+            LINEA
+        */
+
+        /*
+        EJERCICIO 7.
+        Declara a = 10 y b = 3.
+        Muestra en consola:
+        a + b, a - b, a * b, a / b, a % b.
+        */
+
+        var a = 10
+        var b = 3
+
+        console.log(a + b);
+        console.log(a - b);
+        console.log(a * b);
+        console.log(a / b);
+        console.log(a % b);
+
+        /*
+        EJERCICIO 8
+         Declara base y altura.
+         Calcula el área de un rectángulo y muéstrala. Incluye un manejo de errores para el caso en que los valores de las variables no estén permitidos. 
+        */
+
+        var base = 10
+        var altura = -9
+
+        if(isNaN(base) || isNaN(altura)){
+            console.log("Porfavor ingresa valores correctos");
+        } else if (base <= 0 || altura <= 0){
+            console.log("Porfavor ingresa numeros postivios");
+        } else {
+            console.log( "Area del rectangulo " + (base * altura));
+        }
+
+        /*
+        EJERCICIO 9
+        Usando el operador de exponente , calcula:
+        • el cuadrado de un número
+        • el cubo de un número
+        • La raíz cúbica de un número
+        */
+        
+        var numero = 9
+
+        console.log(9**2);
+        console.log(9**3); //Asi se potencia a un numero
+        console.log(9**(1/3)); //Asi se hace la raiz de un numero
+
+
+        /*
+        EJERCICIO 10
+        Declara n = 5.
+        Muestra en consola el resultado de:
+        console.log(++n);
+        console.log(n++);
+        console.log(n);
+
+        Comenta qué ha pasado en cada paso.
+        */
+
+        var n = 5
+
+        console.log(++n);
+        //Aqui se incremento el numero antes de mostrarlo
+        console.log(n++);
+        //Aqui se incremento el numero despues de mostrarlo
+        console.log(n);
+
+        /*
+        EJERCICIO 11
+        Declara x = 20.
+        Usa, en este orden: x -= 5, x *= 2, x /= 5, mostrando x después de cada operación.
+        */
+
+        var x = 20
+
+        x-=5
+        //Esto es una forma resumida de escribir x = x - 5
+        console.log(x);
+
+        x*=2
+        //Esto es una forma resumida de escribir x = x * 2
+        console.log(x);
+        
+        x/=2
+        //Esto es una forma resumida de escribir x = x / 2
+        console.log(x);
+
+        /*
+        EJERCICIO 12
+        Prueba estas dos líneas y compara los resultados:
+        console.log("10" - 3);
+        console.log("10" + 3);
+        */
+
+        console.log("10" - 3);
+        console.log("10" + 3);
+        
+        /*
+            Aqui sucede que al usar el "-" JS interpreta el "10" como 
+            un NUMERO y le resta 3, pero al usar el "+" JS interpreta 
+            el "10" como un TEXTO y le añade el 3 al final 
+        */
+
+        /*
+        13. Escribe estas comparaciones y anota si son true o false:
+        5 == "5"
+        5 === "5"
+        0 == false
+        0 === false
+        1!== "1"
+        1!=true
+        comenta cada resultado. 
+        */
+
+        console.log(5 == "5"); //true
+        console.log(5 === "5");//false
+        console.log(0 == false);//true
+        console.log(0 === false);//false
+        console.log(1!== "1");//true
+        console.log(1!=true);//false
+
+        /*
+        EJERCICIO 14
+        Declara edad1 y edad2.
+        Muestra mensajes en consola indicando si edad1 es mayor, menor o igual que edad2.
+        */
+
+        var edad1 = 10
+        var edad2 = 10
+
+        if (edad1 < edad2) {
+            console.log("Edad 1 es menor que edad 2");
+        } else if (edad1 > edad2) {
+            console.log("Edad 1 es mayor que edad 2");
+        } else {
+            console.log("Edad 1 es igual que edad 2");
+        }
+
+
+        /*
+        Ejercicio 15 
+        Comprueba el resultado de:
+
+        "casa" > "coche"
+        "Perro" < "gato"
+        "A" < "a"
+        */
+
+        console.log("casa" > "coche") //false
+        console.log("casa" > "CASA") //true (ejemplo profe)
+        console.log("Perro" < "gato") //true
+        console.log("A" < "a") //true
+
+        /*
+            Aqui lo que pasa es que JS compara caracter a caracter su 
+            unicode, asi que cuando son la misma letra, da true, pero 
+            si una cambia, ya da false, lo que pasa es que las letras 
+            mayusculas su unicode es menor que el unicode de las 
+            minusculas
+        */
+
+        /*
+        EJERCICIO 16 
+        Declara una variable nota.
+        Muestra "Aprobado" si nota es mayor o igual que 5, o "Suspenso" si es menor (usa if...else).
+        */
+
+        var nota = 4
+
+        if (nota >= 5) {
+            console.log("aprobado");
+        } else {
+            console.log("suspenso");
+        }
+
+        /*
+        Ejercicio 17 
+        Declara edad = 22 y tieneCarnet = true.
+        Crea una expresión lógica que sea true solo si la persona puede conducir (mayor o igual de 18 y tiene carnet).
+        */
+
+        var edad = 22
+        var tieneCarnet = false
+
+        if (edad >= 18 && tieneCarnet == true) {
+            console.log("Puede conducir");
+        } else {
+            console.log("La persona no puede conducir"); 
+        }
+
+        /*
+        EJERCICIO 18 
+        Declara esFinDeSemana y tieneDeberes (boolean).
+
+        Escribe una expresión lógica que sea true solo si puede salir con amigos según estas reglas:
+        • Puede salir si es fin de semana y ha realizado todos los deberes.
+        */
+
+        var esFinDeSemana = true
+        var tieneDeberes = true
+
+        if(esFinDeSemana && !tieneDeberes){
+            console.log("puede salir");
+        } else {
+            console.log("NO puede salir");
+            
+        }
+
+        /*
+        EJERCICIO 19
+         Crea una expresión que sea true solo si un número n está entre 10 y 20 (incluidos).
+        Prueba con varios valores de n.*/
+
+        //var n = 7
+        //var n = 17
+        var n = 27
+
+
+        if (n >= 10 && n <= 20) {
+            console.log("NUmero entre el rango");
+        } else {
+            console.log("Numero fuera del rango");
+            
+        }
+
+        /*
+        EJERCICIO 20
+        Escribe esta línea y observa el error:
+        console.log(true &&);
+
+        Luego corrígela para que sea una expresión válida.
+        */
+
+        console.log(true && true);
+
+        /*
+            El error es que al usar el operador logico && tienen que haber expresiones a ambos lados para poder comparar, si no
+            da error
+        */
+
+        /*
+        EJERCICIO 21. 
+        Crea variables de tipo:
+            • number
+            • string
+            • boolean
+            • objeto ({})
+            • array ([])
+            • null
+            • undefined
+        Muestra typeof de cada una y comenta los resultados.
+        */
+
+        var number = 19
+        var string = "Hola mundo"
+        var boolean = true
+        var objeto = {
+            "clave" : "valor"
+        }
+        var array = [1,2,3]
+        var nulo = null
+        var indefinido = undefined
+
+        console.log(typeof(number));
+        console.log(typeof(string));
+        console.log(typeof(boolean));
+        console.log(typeof(objeto));
+        console.log(typeof(array));
+        console.log(typeof(nulo));
+        console.log(typeof(indefinido));
+
+
+
+        /*
+        EJERCICIO 22
+        Crea frutas = ["manzana", "pera"].
+        Muestra:
+        typeof frutas,
+        frutas instanceof Array,
+        frutas instanceof Object.
+        Comenta los resultados
+        */
+        
+
+
+        
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <h2>Practica 2.1</h2>
+    <p>
+        Abre la consola del navegador para ver el resultado.
+    </p>
+</body>
+</html>
+
+
+

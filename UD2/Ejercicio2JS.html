@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        // Comparamos desigualdad
+        console.log("De la misma forma sucede con la desigualdad usando‘!==’ para valor y tipo, y '!='' sólo para valor");
+        let comparacion = (2 !== 3);
+        console.log("Como por ejemplo comprobar si'2!==3':" + comparacion);
+        comparacion = (2 != 3);
+        console.log("Y como por ejemplo comprobar si'2!=3':" + comparacion);
+
+        // Un caso especial es el operador ternario (?:)
+        console.log("Un caso especial es el operador ternario con el formato  (condición)? valorSiEsTrue : valorSiEsFalse ");
+        var comparacion1 = (true) ? "verdadero" : "falso";
+        //console.log("Como por ejemplo comprobar qué devuelve la consola si (true)?"verdadero":"falso": " +comparacion );
+
+        // Operadores lógicos que responden a la combinación de diferentes valores "Booleanos“
+
+        // AND Lógico
+        let comparacion2 = (true && true);
+        console.log("Si queremos comprobar que dos condiciones son ambas verdades utilizaremos el operador '&&' (AND lógico)");
+        console.log("Como por ejemplo comprobar ('true' && 'true') que devolvería devolver: " + comparacion);
+        console.log("NOTA: Cualquier otra combinación de valores booleanos con el AND lógico devolvería FALSE");
+        // OR Lógico
+        Comparacion = (false || false);
+        console.log("Si dos condiciones son ambas y también por separado FALSAS utilizaremos el operador '||' (OR lógico)");
+        console.log('Como por ejemplo comprobar ("false" || "false") que devolvería devolver: ' + comparacion);
+        console.log("NOTA: Cualquier otra combinación de valores booleanos con el OR lógico devolvería TRUE");
+
+        // Operadores lógicos que responden a la combinación de diferentes valores "Booleanos“
+        // NOT lógico
+        Comparacion = ! true;
+        console.log("Si queremos invertir el valor de una comparación a su valor complementario (pasar el TRUE a FALSE) y viceversa utilizaremos el operador '!' (NOT lógico)");
+        console.log('Como por ejemplo comprobar (!"true") que devolvería devolver: ' + comparacion);
+
+        // El operador "typeof" devolverá el tipo de dato del valor que contiene la variable
+        let variable = "Hola";
+        console.log("El operador 'typeof' devolverá el tipo de dato del valor que contiene la variable");
+        console.log("Por ejemplo el valor de la variable llamada 'variable' es :" + variable);
+        console.log("Y al llamar a 'typeof(variable)' me indica que es del tipo: " + typeof (variable));
+        // El operador "instanceof" devolverá verdadero si un objeto es una instancia de un tipo de objeto
+        console.log("El operador 'instanceof' devolverá verdadero si un objeto es una instancia de un tipo de objeto");
+        let fecha = new Date();
+        console.log('Por ejemplo al llamar a (fecha instanceof Date) devolverá: '
+            + (fecha instanceof Date));
+
+        //instanceof falso
+
+        console.log(fecha instanceof Object);
+        /* El instanceof detecta si una variable es una instancia de un objeto(POO de toda la vida) este devuelve true si detecta que la 
+        que le pasemos, es instancia de uno de los objetos tipicos de JS (Date,Array,function,object) si queremos usarlo para comparar
+        los tipos de datos basicos, debemos definirlos como si fueran objetos*/
+
+        /*
+           En javascript no es posible detectar null con un typeof ya que en caso que se de, este devolvera object, este es un bug
+           jistorico de JS, y por medio del instanceof tampoco
+       */
+
+        var x = new String("Pepe")
+        console.log(x); //Esto da un objeto de tipo String
+        console.log(x instanceof String); //Esto da true
+
+
+        console.log(fecha instanceof String);
+
+        //-----------------------------------------------------------
+
+        // Utilizaremos una sentencia "if" para especificar un bloque de código
+        // que se debe ejecutar cuándo la condición sea verdadera
+        if (true) {
+            console.log("La condición del \"if\" fue verdadera.");
+        }
+        // Use la instrucción "else" para especificar un bloque de código que se 
+        // ejecutará si la condición es falsa.
+        if (false) {
+            console.log("Este mensaje no se mostrará nunca al ser la condición falsa.");
+        }
+        else {
+            console.log("Se muestra este mensaje porque la condición del \"if\" fue falsa y este mensaje está dentro del \"else\"");
+        }
+        // Use la instrucción "else if" para especificar una nueva condición si la primera condición es falsa.
+        let condicion1 = false, condicion2 = false;
+        if (condicion1) {
+            console.log("Este mensaje no se mostrará nunca al ser la 1ª condición falsa.");
+        }
+        else if (condicion2) {
+            console.log("Este mensaje no se mostrará nunca al ser la 2ª condición falsa.");
+        }
+        else {
+            console.log("Se muestra este mensaje al estar en el último \"else\" que llegó por ser las condiciones previas falsas.");
+        }
+
+        //Ejemplo de if / else if / else
+
+        var numero = 7
+
+        if (numero < 0) {
+            console.log("El numero es negativo");
+        } else if (numero == 0) {
+            console.log("El numero es 0");
+        } else {
+            console.log("El numero es positivo");
+        }
+
+        //------------------------------
+
+        console.log("---------------------------------------------------");
+
+        var dia;
+
+        switch (new Date().getDay()) {
+            case 0:
+                dia = "Domingo";
+                break;
+            case 1:
+                dia = "Lunes";
+                break;
+            case 2:
+                dia = "Martes";
+                break;
+            case 3:
+                dia = "Miércoles";
+                break;
+            case 4:
+                dia = "Jueves";
+                break;
+            case 5:
+                dia = "Viernes";
+                break;
+            case 6:
+                dia = "Sábado";
+                break;
+        }
+
+        console.log(dia);
+
+        //------------------------------
+
+        console.log("---------------------------------------------------");
+
+        // El bucle "while" ejecutará su bloque de código después de comprobar que su condición es "true“
+        // Y una vez ejecutado su bloque de código repetira el proceso, comprueba su condición, y si ésta
+        // es "true" volverá a ejecutar su bloque de código. Este proceso se repetirá, hasta que la condición
+        // devuelva "false" o dentro del código se ejecute la sentencia "break;"
+        console.log("Mostraremos los números, pares del 1 al 10:");
+        let numero1 = 1;
+        while (numero1 <= 10) {
+            if ((numero1 % 2) == 0) {
+                console.log("Número " + numero1);
+            }
+            numero1++;
+        }
+        // El bucle "do while" es una variante del "while", actua exactamente igual, salvo que la
+        //comprobación de su condición se realizará trás ejecutar el bloque de código.
+        console.log("Mostraremos los números, impares del 1 al 10:");
+        numero1 = 1;
+        do {
+            if ((numero1 % 2) != 0) {
+                console.log("Número " + numero1);
+            }
+            numero1++;
+        } while (numero1 <= 10);
+
+        //------------------------------------------------
+
+        console.log("------------------------------------------------");
+
+        // El bucle "for" lo utilizaremos para repetir un bloque de código un número determinado de veces
+        console.log("Mostraremos los números, múltiplos de 3 del 1 al 10");
+        for (let i = 1; i <= 10; i++) {
+            if ((numero % 3) == 0) {
+                console.log("Número " + numero);
+            }
+        }
+        // Podemos utilizar el bucle "for in" para:
+        // 1.- Recorrer las propiedades de un objeto
+        const persona = { nombre: "Juan", apellido: "Nadie", edad: 25 };
+        let texto = "";
+        for (let x in persona) {
+            texto += persona[x];
+            texto += " ";
+        }
+        console.log(texto);
+        // 2.- Recorrer los elementos de un array
+        const numerosPrimitiva = [1, 10, 18, 21, 30, 3];
+        let numeros = "";
+        for (let x in numerosPrimitiva) {
+            numeros += numerosPrimitiva[x];
+            numeros += " ";
+        }
+        // String.substring(posicionCaracterInicio, PosicionCaracterFin)
+        // el carácter posicionado en "PosiionCaracterFin" no se incluirá en la subcadena generada.
+        console.log("Mi apuesta de la primitiva es: " + numeros.substring(0, (numeros.length - 1)));
+
+
+
+
+
+
+
+
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Operadores Logicos</h2>
+    <p>
+        Abre la consola del navegador para ver el resultado.
+    </p>
+</body>
+
+</html>
