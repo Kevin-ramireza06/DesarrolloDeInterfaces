@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        console.log("Navegador -> " + navigator.userAgent);
+        console.log("Idioma -> " + navigator.language);
+        console.log("Plataforma -> " +  navigator.platform);
+
+        console.log("Ancho -> " + screen.availWidth);
+        console.log("Altura -> " + screen.availHeight);
+
+        console.log("URL actual -> " + location.href);
+
+        console.log("Titulo del documento -> " + document.title);
+
+        console.log("Numero de entradas del historial -> " + history.length);
+
+        console.log("Tiempo que tarda en ejecutarse un bucle: ");
+        
+
+        let inicio = performance.now();
+         for (let i = 0; i < 1000000000; i++) { 
+
+         } 
+         let fin = performance.now(); console.log("Tiempo:", fin - inicio, "ms");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

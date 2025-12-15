@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let alumno = {
+            nombre : "Carlos",
+            "nota final" : 0.5
+        }
+
+        //Notacion de punto
+        console.log("Notacion de punto de alumno.nombre" , alumno.nombre);
+
+        //Notacion Corchetes
+        console.log("notacion corchete alumno[bota final] " , alumno["nota final"]);
+
+        //Acceso dinamico
+        let clave = "nombre"
+        console.log("acceso usandola variable clave" , alumno[clave]);
+
+        //Prueba
+        //console.log("Prueba de notacion de punto con espacios" , alumno.);
+
+        /*
+        Uncaught SyntaxError: missing name after . operator
+
+        directamente salta sitax error y tampoco el autocompletado de 
+        VSCode detecta el "nota final" con espacios, asi que para 
+        estos casos es mejor usar la notacion de corchetes
+
+        (Los corchetes aqui en objetos recuerdan a un array)
+        */
+        
+        
+        
+        
+    </script>
+</head>
+<body>
+    <h1>Mas ejemplos con Objetos</h1>
+    <p>EN consola</p>
+    
+</body>
+</html>

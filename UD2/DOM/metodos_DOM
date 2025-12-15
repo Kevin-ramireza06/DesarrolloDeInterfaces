@@ -1,0 +1,30 @@
+// Mostraremos el elemento con el "id" a "stacked-state"
+    console.log("El elemento HTML con el \"id\" igual a \"stacked-state\" sería: \n"+
+        document.getElementById("stacked-state").outerHTML);
+
+// Mostraremos el primer elemento <input> del formulario
+    console.log("El primer elemento HTML <input> del formulario sería: \n"+
+        document.getElementsByTagName("input")[0].outerHTML);
+
+// Mostraremos el primer elemento con el "class" igual a "pure-button"
+    console.log("El primer elemento HTML con el \"class\" igual a \"pure-button\" sería: \n"+
+        document.getElementsByClassName("pure-button")[0].outerHTML);
+
+// Mostraremos el primer elemento con el atributo "name" igual a "pass
+    console.log("El primer elemento HTML con el atributo \"name\" igual a \"pass\" sería: \n"+
+        document.getElementsByName("pass")[0].outerHTML);
+
+// Pudiendo también mostrar el valor que contiene este último
+    console.log("El valor introducido en el primer elemento HTML con el atributo \"name\" igual a \"pass\" sería: \n"+
+        document.getElementsByName("pass")[0].value);
+
+// Mostraremos el último elemento de opción de selección del "State"
+    console.log("La última opción de selección de \"State\" sería: \n"+
+        document.querySelector("[name='estado'] > option:last-child").outerHTML);
+
+// Mostraremos todas las opciones de selección del "State"
+    console.log("Las posibles opciones de selección del \"State\" serían:\n");
+
+    for (let i=0, lista=document.querySelectorAll("[name='estado'] > option"); i<lista.length; i++){
+        console.log(lista[i].outerHTML);
+    }
