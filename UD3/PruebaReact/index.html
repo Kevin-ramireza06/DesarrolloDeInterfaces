@@ -19,12 +19,20 @@
     </div>
 
     <script type="text/babel">
+        import { useState } from "react";
+
         function App() {
-            return <h2>Hola Mundo desde React + CDN</h2>;
+        const [nombre, setNombre] = useState("");
+
+        return (
+            <div>
+            <input value={nombre} onChange={(e) => setNombre(e.target.value)} />
+            <p>Hola {nombre}</p>
+            </div>
+        );
         }
 
-        const root = ReactDOM.createRoot(document.getElementById("root"));
-        root.render(<App />);
+        export default App;
     </script>
 </body>
 </html>
